@@ -1,0 +1,32 @@
+// ==UserScript==
+// @name         New Userscript
+// @namespace    http://tampermonkey.net/
+// @version      0.1
+// @description  try to take over the world!
+// @author       You
+// @match        https://www.suny.edu/humanresources/position/
+// @grant        none
+// @require      https://cdn.rawgit.com/mholt/PapaParse/master/papaparse.min.js
+// @require      https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js
+// ==/UserScript==
+
+(function() {
+    'use strict';
+
+    // read file
+    $(document).ready(function(){
+            var lineItemNumber = $('#main > form > table.position-filter-table > tbody > tr:nth-child(2) > td:nth-child(2) > input[type="text"]');
+            // add UI interface
+            var tblBody = $('#main > form > table.position-search-table > tbody');
+            var erow = $('<tr><td>&nbsp</td><td>&nbsp</td><td>&nbsp</td><td>&nbsp</td></tr>');
+            var row = $('<tr><td><b>Load CSV</b></td></tr>');
+            tblBody.append(erow).append(row);
+
+    });
+
+
+
+
+
+
+})();
